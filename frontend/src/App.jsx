@@ -4,6 +4,9 @@ import "./App.css";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer, toast } from "react-toastify";
 
+const URL =
+  "http://lumio-partners-server.centralindia.cloudapp.azure.com:5000/";
+
 function App() {
   const [html, setHtml] = useState("");
   const [subject, setSubject] = useState("");
@@ -15,7 +18,7 @@ function App() {
   const fetchEmail = async () => {
     toast("Generating email...");
     try {
-      const response = await fetch("http://localhost:5000/api/generate_email", {
+      const response = await fetch(URL + "/api/generate_email", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -52,7 +55,7 @@ function App() {
         return;
       }
 
-      const response = await fetch("http://localhost:5000/api/send_email", {
+      const response = await fetch(URL + "/api/send_email", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
