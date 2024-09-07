@@ -5,7 +5,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer, toast } from "react-toastify";
 
 const URL =
-  "http://lumio-partners-server.centralindia.cloudapp.azure.com:5000/";
+  "http://lumio-partners-server.centralindia.cloudapp.azure.com:5000";
 
 function App() {
   const [html, setHtml] = useState("");
